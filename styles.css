@@ -1,0 +1,704 @@
+/* Reset and general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #dddddd;
+    text-align: center;
+    background-color: #497081;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    color: black;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    border-color: rgb(204, 196, 78);
+    border-radius: 10px;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 1368px) {
+    .navbar {
+        padding: 0 1.5rem; /* Adjust padding */
+    }
+
+    .hero h1 {
+        font-size: 2.75rem; /* Slight reduction in font size */
+    }
+
+    .hero p {
+        font-size: 1.125rem; /* Slight reduction in font size */
+    }
+
+    .cta-button {
+        padding: 0.9rem 1.8rem; /* Adjust padding for button */
+    }
+
+    }
+
+    .about, .why-choose-us, .services, .contact {
+        padding: 3rem 1.5rem; /* Adjust section padding */
+    }
+
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav-links.show {
+        display: flex;
+    }
+    
+    .nav-links li {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .nav-links a {
+        width: 100%;
+        padding: 1rem;
+        text-align: left;
+        border: none;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background: linear-gradient(5deg, rgb(81, 126, 141) 20%, #2d576b 40%, #2a6885 80%); /* Adjust the percentages as needed */
+    color: #fffcfc; /* Font color */
+    height: 100vh;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 50%;
+    margin-top: 2rem; /* Adjust this value to move the text down */
+    padding-top: 2rem; /* You can use padding instead of margin */
+    transform: translateY(-130px); /* Another way to adjust vertical position */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #3B4371;
+    color: #dfc674;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2D3258;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    width: auto; /* Set a specific width */
+    height: 550px; /* Set a specific height */
+    border-radius: 10px;
+    margin-top: 2rem; /* Adjust this value to move the image down */
+    padding-top: 3rem; /* You can use padding instead of margin */
+    transform: translateY(-70px); /* Another way to adjust vertical position */
+    border: none; /* Add a border around the image */
+
+    
+}
+
+
+@media (max-width: 1024px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .hero-text{
+        max-width: 100%;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        transform: translateY(30px);
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Adjust font size for headings */
+    }
+
+    .hero p {
+        font-size: 1.7rem; /* Adjust font size for paragraphs */
+    }
+
+    .cta-button {
+        padding: 0.75rem 1.5rem; /* Adjust padding for call-to-action button */
+        transform: translateY(-30px); /* Another way to adjust vertical position */
+        font-size: 1.8rem;
+    }
+    .hero-image img {
+        margin-top: 2rem; /* Adjust this value to move the image down */
+        padding-top: 2rem; /* You can use padding instead of margin */
+        transform: translateY(-50px); /* Another way to adjust vertical position */
+        max-width: 100%;
+        height: auto;
+        width: 595px; /* Set a specific width */
+        height: 750px; /* Set a specific height */
+    }
+    }
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 4rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Further adjust font size for headings */
+        margin-top: -2rem;
+    }
+
+    .hero p {
+        font-size: 0.875rem; /* Further adjust font size for paragraphs */
+    }
+
+    .cta-button {
+        padding: 0.5rem 1rem; /* Further adjust padding for call-to-action button */
+        transform: translateY(-30px); /* Another way to adjust vertical position */
+    }
+    .hero-text {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        transform: translateY(-100px);
+    }
+    .hero-image img {
+        margin-top: -5.5rem; /* Adjust this value to move the image down */
+        width: auto;
+        height: 65vh;
+
+}
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem; /* Further adjust font size for headings */
+    }
+
+    .hero p {
+        font-size: 0.85rem; /* Further adjust font size for paragraphs */
+    }
+
+    .cta-button {
+        padding: 0.5rem 0.75rem; /* Further adjust padding for call-to-action button */
+        font-size: 0.85rem;
+    }
+
+    }
+    .hero-text {
+        margin-top: 4rem;
+        padding-top: 0.5rem;
+        transform: translateY(-100px);
+    }
+    
+    
+
+
+/* About Section */
+.about {
+    background: linear-gradient(135deg, #f5f7fa, #e2ebf0);
+    color: #333;
+    padding: 4rem 2rem;
+}
+
+.about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #cfbf82;
+}
+
+.about-header p {
+    font-size: 1.25rem;
+    color: #555;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #E3DBBF;
+}
+
+.about-text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #E3DBBF;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background-color: #c2b49f;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-video {
+    width: 85%; /* Adjust the width as needed */
+    max-width: 650px; /* Maximum width of the video */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 450px; /* Maximum height of the video */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(179, 87, 87, 0.1);
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    background: linear-gradient(135deg, #ffffff, #f5f7fa);
+    color: #333;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.why-choose-us .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.why-choose-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #cfbf82;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.feature {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #E3DBBF;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Services Section */
+.services {
+    background: linear-gradient(135deg, #f5f7fa, #e2ebf0);
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #333;
+}
+
+.services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #cfbf82;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #E3DBBF;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.service-card ul {
+    list-style: none; 
+    padding-left: 0;
+    text-align: left; /* Align text to the left for better readability */
+    margin-top: 1rem; /* Add some margin above the list */
+}
+
+.service-card li {
+    margin-bottom: 0.5rem; /* Add some space between list items */
+}
+
+.service-card li strong {
+    color: #575655; /* Match the heading color */
+    display: block; /* Make the strong text block level for better spacing */
+}
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(135deg, #ffffff, #f5f7fa);
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #333;
+}
+
+.contact .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #cfbf82;
+}
+
+.contact p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.contact-form, .contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+}
+
+textarea {
+    height: 150px;
+}
+
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.consent-group {
+    display: flex;
+    align-items: center;
+}
+
+.submit-button {
+    display: inline-block;
+    background-color: #E3DBBF;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #c2b49f;
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.contact-info h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #cfbf82;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Increase size of the clock-icon image and other feature icons */
+.feature-icon img {
+    width: 110px;  /* Increase width */
+    height: 110px; /* Increase height */
+    margin-bottom: 1rem;
+}
+
+.service-icon {
+    width: 110px;  /* Increase width */
+    height: 110px; /* Increase height */
+    margin-bottom: 1rem;
+}
+
+/* Highlight Class */
+.highlight {
+    color: #FFE383; /* Golden brown color */
+}
+
+/* Sticky Navbar */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+  .typing-word {
+    color: #fbe7a6;
+    font-weight: bold;
+    text-shadow:none;
+    border-right: -5px solid #FFE383;
+    animation: caret 0.75s steps(1) infinite;
+  }
+  
+  @keyframes caret {
+    from {
+      border-color: transparent;
+    }
+    to {
+      border-color: #FFE383;
+    }
+  }
+  .animate-charcter
+  {
+     text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      #231557 0%,
+      #000000 29%,
+      #FFE383 67%,
+      #d3d3d3 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 30% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 5s linear infinite;
+    display: inline-block;
+        font-size: 28px;
+  }
+  
+  @keyframes textclip {
+    to {
+      background-position: 100% center;
+    }
+  }
+/* Footer */
+footer {
+    background-color: #595959;
+    color: #ddd;
+    padding: 2rem 1rem;
+    text-align: left;
+}
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+ 
