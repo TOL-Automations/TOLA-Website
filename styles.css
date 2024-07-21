@@ -214,7 +214,7 @@ header {
     .cta-button {
         padding: 0.75rem 1.5rem; /* Adjust padding for call-to-action button */
         transform: translateY(-30px); /* Another way to adjust vertical position */
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
     .hero-image img {
         margin-top: 2rem; /* Adjust this value to move the image down */
@@ -279,7 +279,12 @@ header {
         padding-top: 0.5rem;
         transform: translateY(-100px);
     }
-    
+       .about-text {
+        margin-top: 4rem;
+        padding-top: 0.5rem;
+        transform: translateY(-100px);
+        margin-left: -1.5rem;    
+    } 
     
 
 
