@@ -4,16 +4,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.getElementById('nav-links');
 
     window.addEventListener('scroll', function () {
-        if (window.scrollY > 0) {
-            navbar.classList.add('sticky');
-        } else {
-            navbar.classList.remove('sticky');
-        }
-    });
-
-    hamburger.addEventListener('click', function () {
-        navLinks.classList.toggle('show');
-    });
+      navbar.classList.toggle('sticky', window.scrollY > 0);
+  });
+  
+  hamburger.addEventListener('click', function () {
+      navLinks.classList.toggle('show');
+  });
 });
 document.addEventListener('DOMContentLoaded', function () {
     var word = 'Autopilot?',
@@ -54,4 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
     type();
   });
-  
+  function hamburger() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
