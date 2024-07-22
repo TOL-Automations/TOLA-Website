@@ -30,6 +30,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-top: 0rem;
+    height: auto;
 }
 
 .nav-links {
@@ -51,7 +52,7 @@ header {
 }
 
 .nav-links a:hover {
-    border-color: rgb(204, 196, 78);
+    border-color: rgb(170, 163, 64);
     border-radius: 10px;
 }
 
@@ -61,9 +62,12 @@ header {
 
 /* Hamburger Menu */
 .hamburger {
-    display: none;
+    display: none; /* Initially hidden, will be shown on smaller screens */
     font-size: 2rem;
     cursor: pointer;
+    position: absolute; /* Position it absolutely within its container */
+    right: 1rem; /* Align it to the right */
+    transform: translateY(-20%); /* Adjust for perfect vertical centering */
 }
 
 @media (max-width: 1368px) {
@@ -132,6 +136,11 @@ header {
     background: linear-gradient(5deg, rgb(81, 126, 141) 20%, #2d576b 40%, #2a6885 80%); /* Adjust the percentages as needed */
     color: #fffcfc; /* Font color */
     height: 100vh;
+}
+
+html{
+scroll-behavior: smooth;
+
 }
 
 .hero-content {
@@ -280,13 +289,36 @@ header {
         padding-top: 0.5rem;
         transform: translateY(-100px);
     }
-       .about-text {
+    .about-text {
         margin-top: 4rem;
         padding-top: 0.5rem;
         transform: translateY(-100px);
-        margin-left: -1.5rem;    
-    } 
+        text-indent: 2rem;
+        margin-left: -1.5rem;
+    }
+    .nav-links a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        padding: 0.1rem 0.5rem;
+        border: 0.2px solid transparent;
+        transition: all 0.3s ease;
+    }
     
+    .nav-links a:hover {
+        border-color: rgb(170, 163, 64);
+        border-radius: 15px;
+    }
+    
+    .nav-toggle {
+        display: none;
+    }
+    .hamburger {
+        transition: 1s ease-in-out;
+    }
+    html{
+scroll-behavior: smooth;
+}
 
 
 /* About Section */
@@ -334,6 +366,12 @@ header {
     font-size: 1.75rem;
     margin-bottom: 1rem;
     color: #E3DBBF;
+}
+
+.about-text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .about-text p {
